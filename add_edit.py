@@ -1,13 +1,14 @@
 from PyQt5 import uic
 from PyQt5.QtWidgets import QWidget
+from add_edit_form import Ui_CoffeeRecord
 
 fields = ['name', 'roast', 'type', 'taste', 'price', 'volume']
 
 
-class Add_edit_form(QWidget):
+class Add_edit_form(QWidget, Ui_CoffeeRecord):
     def __init__(self, parent):
         super().__init__()
-        uic.loadUi('addEditCoffeeForm.ui', self)
+        self.setupUi(self)
         self.parent = parent
         self.id = None
         self.okButton.clicked.connect(self.save)

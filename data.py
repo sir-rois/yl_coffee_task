@@ -3,7 +3,7 @@ import sqlite3
 
 class Data:
     def __init__(self):
-        self.connection = sqlite3.connect('coffee.sqlite')
+        self.connection = sqlite3.connect('data/coffee.sqlite')
         self.cursor = self.connection.cursor()
         data = self.cursor.execute('SELECT * FROM coffee').fetchall()
 

@@ -28,7 +28,7 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>Капучино</string>
+   <string>Латте макиато</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="sizePolicy">

@@ -6,12 +6,14 @@ from PyQt5.QtWidgets import QMainWindow, QTableWidgetItem, QHeaderView
 
 from add_edit import Add_edit_form
 from data import Data
+from main_form import Ui_CoffeeWindow
 
 
-class Coffee(QMainWindow):
+class Coffee(QMainWindow, Ui_CoffeeWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi('main.ui', self)
+        self.setupUi(self)
+
         self.add_edit_form = Add_edit_form(self)
         self.fields_cnt = 7
         self.stretch_idx = 4
